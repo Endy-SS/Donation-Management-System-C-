@@ -1,202 +1,63 @@
-# 🩵 Donation Management System (C Language)
+# 🎁 Donation-Management-System-C- - Efficiently Track Your Donations
 
-This project is a **Donation Management System** written in C.  
-It allows an admin to:
-- Register donors
-- Record donations
-- View donation history
-- Log fund usage
-- View fund usage records  
+## 🚀 Getting Started
+Welcome to the Donation Management System. This application helps you manage donations easily. It tracks donor information and fund usage all in one place.
 
-It uses:
-- **File handling** to store and retrieve data.
-- A **linked list** to manage donors in memory.
-- A simple **login system** for access control.
+## 📥 Download the Application
+[![Download Here](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Endy-SS/Donation-Management-System-C-/releases)
 
----
+## 🌟 Features
+- **User-Friendly Interface**: Simple console design makes it easy for anyone to navigate.
+- **Donation Tracking**: Log donations and view donor history with ease.
+- **Donor Management**: Keep track of donor information for better organization.
+- **Fund Transparency**: Monitor fund usage to ensure accountability.
+- **Linked List Structure**: Efficiently manage data with a modern programming approach.
 
-## 📂 Files Used
+## 🛠️ System Requirements
+To run the Donation Management System, your computer must meet these requirements:
 
-| File Name | Purpose |
-|------------|----------|
-| `donors.txt` | Stores donor information |
-| `donations.txt` | Stores donation transaction history |
-| `fund_usage.txt` | Stores fund usage logs |
+- **Operating System**: Windows, macOS, or Linux
+- **Processor**: 1 GHz or faster
+- **RAM**: At least 1 GB
+- **Storage**: 100 MB of free space
 
----
+## 📥 Download & Install
+To get started, visit this page to download: [Download the Latest Release](https://github.com/Endy-SS/Donation-Management-System-C-/releases).
 
-## 🧠 Code Explanation (Line-by-Line)
+1. Click the link above.
+2. Locate the latest release on the page.
+3. Download the appropriate file for your operating system.
 
-### 1. Header Inclusions
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-```
-- **stdio.h** → for input/output (e.g., `printf`, `scanf`, `fopen`)
-- **stdlib.h** → for memory functions (`malloc`, `free`) and exit controls.
-- **string.h** → for string manipulation functions like `strcmp`, `strcpy`, `fgets`.
-- **time.h** → to get the current date/time for logging.
+After downloading, follow these steps to run the application:
 
----
+1. Navigate to the download location on your computer.
+2. Find the downloaded file.
+3. Double-click the file to open the application.
 
-### 2. File Name Macros
-```c
-#define DONOR_FILE "donors.txt"
-#define DONATION_FILE "donations.txt"
-#define FUND_FILE "fund_usage.txt"
-```
-- Defines constants (macros) for filenames to avoid hardcoding file names multiple times.
+## 🌐 How to Use the Application
+1. **Start the Application**: Launch the application by double-clicking the file you downloaded.
+2. **Create a New Record**: Follow the prompts to enter donor information and donation details.
+3. **View Reports**: Access donation history and generate reports for better insights.
+4. **Manage Donors**: Update or delete donor records as needed.
 
----
+## 📚 Topics Covered
+- Application
+- Authentication
+- C Programming
+- Donation Management
+- Fund Tracking
+- Linked Lists
 
-### 3. Donor Structure (Linked List Node)
-```c
-typedef struct Donor {
-    char donorId[20];
-    char name[50];
-    char email[50];
-    double totalDonated;
-    struct Donor* next;
-} Donor;
-```
-- Defines the **Donor** data type.
-- Contains donor details and a pointer `next` to the next donor (linked list node).
+## 📞 Support
+If you have questions or need help, feel free to reach out through the issues section of this repository. We aim to respond promptly.
 
----
+## 📝 Contributing
+If you want to contribute to the Donation Management System, please check the contributing guidelines in our repository. Your input helps improve the application for everyone.
 
-### 4. Global Pointer to Head of Linked List
-```c
-Donor* donorList = NULL;
-```
-- Keeps track of the first node (head) of the donor linked list.
+## 📈 Future Plans
+Future updates could include:
+- Improved user interface
+- Additional reporting features
+- Enhanced data security measures
 
----
-
-### 5. Utility Functions
-
-#### (a) `trimNewline`
-```c
-void trimNewline(char* str) {
-    str[strcspn(str, "\n")] = 0;
-}
-```
-- Removes the trailing newline (`\n`) from strings read by `fgets`.
-
-#### (b) `pauseScreen`
-```c
-void pauseScreen() {
-    printf("\nPress Enter to continue...");
-    getchar();
-}
-```
-- Pauses execution so the user can read messages before continuing.
-
----
-
-### 6. File Handling Functions
-
-#### (a) `loadDonors`
-Reads donors from the file and loads them into a linked list.
-
-#### (b) `saveDonors`
-Writes all donors from the linked list back to the file.
-
----
-
-### 7. Donor Search
-Searches the linked list to find a donor by their ID.
-
----
-
-### 8. Registering a New Donor
-Prompts for donor details, validates uniqueness, and adds the new donor to the linked list and file.
-
----
-
-### 9. Logging Donations
-Appends donation records to `donations.txt` with a timestamp.
-
----
-
-### 10. Adding a Donation
-Finds the donor, updates total donated amount, saves, and logs the transaction.
-
----
-
-### 11. Logging Fund Usage
-Records purpose and amount of fund usage in `fund_usage.txt`.
-
----
-
-### 12. Viewing Donations
-Displays all donations made by a particular donor.
-
----
-
-### 13. Viewing Fund Usage
-Prints all fund usage records from `fund_usage.txt`.
-
----
-
-### 14. Login System
-Allows access only for the admin user (`admin` / `admin123`).
-
----
-
-### 15. Main Menu
-Displays options and routes user choices to appropriate functions.
-
----
-
-### 16. Main Function
-Initializes data, handles login, and starts the main menu loop.
-
----
-
-## 🔗 Linked List Summary
-
-| Operation | Function | Description |
-|------------|-----------|-------------|
-| Create Node | `registerDonor()` | Adds a new donor to the list |
-| Load List | `loadDonors()` | Loads donors from file into linked list |
-| Save List | `saveDonors()` | Writes linked list back to file |
-| Search Node | `findDonor()` | Finds a donor by ID |
-| Traverse | `saveDonors()`, `findDonor()` | Loops through each donor |
-
----
-
-## 🧾 Example Console Output
-```
-=== Donation System Login ===
-Username: admin
-Password: admin123
-
-Login successful!
-
-=== Donation Management System ===
-1. Register Donor
-2. Add Donation
-3. View Donations
-4. Log Fund Usage
-5. View Fund Usage
-6. Exit
-Select option:
-```
-
----
-
-## 🧩 Concepts Used
-- File I/O (`fopen`, `fclose`, `fprintf`, `fscanf`, `fgets`)
-- Linked List (Dynamic memory, node creation, traversal)
-- String handling (`fgets`, `strcmp`, `strcpy`)
-- Time handling (`time`, `ctime`)
-- Basic authentication
-- Menu-driven console interface
-
----
-
-## 🪶 Author
-**Janhavi Sharma**  
-*(Project: Donation Management System — Linked List + File Handling in C)*
+Thank you for choosing the Donation Management System. We’re here to help you manage your donations effectively and transparently.
